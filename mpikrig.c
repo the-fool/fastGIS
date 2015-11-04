@@ -17,7 +17,7 @@ int main(int argc, char **argv)
   MPI_Comm_size(MPI_COMM_WORLD, &comm_sz);
     
   if (rank != 0) {
-    printf("Process %d out of %d processes in executing.\n", rank, comm_sz);
+    printf("Process %d out of %d processes executing.\n", rank, comm_sz);
     r_status = slave(rank, comm_sz); 
   }
  
@@ -32,8 +32,10 @@ int main(int argc, char **argv)
   return errno;
 }
 
-int slave(int rank, int comm_sz) {
-  return system("nohup R < ana3.r &");
+int slave(int rank, int comm_sz) { 
+  char exec[32];
+  sprintf(exec, "R < ana3.R > log%d.txt 2>&1 --no-save", rank);
+  return system(exec);
 }
 
   
