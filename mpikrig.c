@@ -25,7 +25,8 @@ int main(int argc, char **argv)
     exit(1);
   }
   int n = atoi(argv[1]);
-  printf("Begin %d iterations of %d processes\n", n, comm_sz);
+  if (rank == 0)
+    printf("Begin %d iterations of %d processes\n", n, comm_sz);
   int i;
   for (i = 0; i < n; i++) {   
     slave(rank, comm_sz);
