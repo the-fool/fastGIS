@@ -4,4 +4,4 @@ sendfile = True
 user = 553
 reload = True
 accesslog = "logs/access.log"
-pidfile = "logs/gunpid.log"
+pidfile = "logs/gun.pid"
