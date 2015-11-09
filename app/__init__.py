@@ -5,7 +5,8 @@ def create_app():
     
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
-
+    
+    app.debug = True
     return app
 
 apple = create_app()
