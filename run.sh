@@ -1,2 +1,2 @@
 #!/bin/bash
-nohup mpiexec -n 2 --machinefile machines krig 5 &
+nohup mpiexec -n 2 --machinefile machines krig 35 &

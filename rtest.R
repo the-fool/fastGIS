@@ -1,7 +1,7 @@
 library(raster)
 library(rgdal)
 library(foreign)
-args <- commandArgs(trailingOnly = TRUE)
+# args <- commandArgs(trailingOnly = TRUE)
 
 Pts <- read.dbf(file="Samples_Bands.dbf")
 Lin.grid <- raster("boundary2.img")
@@ -53,10 +53,10 @@ Pts.dir.fit = fit.variogram(Pts.dir, model = vgm(psill=15.74, model="Sph", range
 Pts.dir.fit
 plot(Pts.dir, Pts.dir.fit)
 # save(Pts, file = "foo_pts.rda")
-print("ending test")
-print(args)
-krigObjName = args[1]
-save(Pts, file = krigObjName)
+# print("ending test")
+# print(args)
+# krigObjName = args[1]
+save(Pts, file = "test.dba")
 # simulation for 
 # print("entering krige")
 # lzn.condsim = krige(CDENSITY~1, Pts, Lin.grid, model = Pts.vgm.fit, nmax = 30, nsim = 1) 
