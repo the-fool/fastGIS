@@ -2,7 +2,7 @@ library(raster)
 library(rgdal)
 library(foreign)
 # args <- commandArgs(trailingOnly = TRUE)
-setwd('/home/truble/fastGIS/app/users/qing/data')
+
 Pts <- read.dbf(file="Samples_Bands.dbf")
 Lin.grid <- raster("boundary2.img")
 # Lin.grid

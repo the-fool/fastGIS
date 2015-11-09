@@ -6,7 +6,8 @@ result = None
 
 @main.route('/')
 def index():
-    return "I work"
+    return "I still work"
+
 
 @main.route('/celtest')
 def celtest():
